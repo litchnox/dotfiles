@@ -1,0 +1,55 @@
+/**
+ * ROFI Color theme
+ * NAME: dt-dmenu.rasi
+ * DESCRIPTION: This is a horizontal prompt similar to dmenu.
+ * AUTHOR: Derek Taylor (DT)
+ */
+
+* {
+    background-color:          #10051E;
+    border-color:               #10051E;
+    text-color:                 #bbc2cf;
+    height:                     22px;
+    font:                       "JetBrains Mono Medium 9";
+    prompt-font:                "JetBrains  Mono Medium 9";
+    prompt-background:          #2D2A50;
+    prompt-foreground:          #ffffff;
+    prompt-padding:             2px;
+    selected-normal-background: #2D2A50;
+    selected-normal-foreground: #ffffff;
+}
+#window {
+    anchor: north;
+    location: north;
+    width: 98%;
+    padding: 0px;
+    children: [ horibox ];
+    border-radius:                  9px;
+        y-offset:                       2px;
+}
+#horibox {
+    orientation: horizontal;
+    children: [ prompt, entry, listview ];
+}
+#prompt {
+    padding:          @prompt-padding;
+    background-color: @prompt-background;
+    text-color:       @prompt-foreground;
+    font:             @prompt-font;
+}
+#listview {
+    layout: horizontal;
+    lines: 100;
+}
+#entry {
+    padding: 2px;
+    expand: false;
+    width: 10em;
+}
+#element {
+    padding: 2px 8px;
+}
+#element selected {
+    background-color: @selected-normal-background;
+    text-color:       @selected-normal-foreground;
+}
